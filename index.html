@@ -4,21 +4,79 @@
     <meta charset="UTF-8" />
 
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+        font-family: Quicksand;
+        color: #373737;
+      }
+
+      body {
+        margin: 12px;
+      }
+
+      .inputs {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .inputs > input {
+        border-radius: 6px;
+        border: 1px solid #aaaaaa;
+        padding: 3px 6px;
+        margin: 0 6px;
+      }
+
+      canvas {
+        background: white;
+        border: 1px solid #aaaaaa;
+        border-radius: 6px;
       }
     </style>
   </head>
 
   <body>
-    <canvas
-      id="canvas"
-      width="500"
-      height="500"
-      style="background: white; border: 1px solid black; margin: 12px;"
-    ></canvas>
+    <div class="inputs">
+      <label for="friction">Frição:</label>
+      <input
+        id="friction"
+        step="0.001"
+        type="number"
+        placeholder="Fricção"
+        value="0.999"
+        max="1"
+        min="0"
+      />
+      <br />
+
+      <label for="wind">Vento:</label>
+      <input
+        id="wind"
+        step="0.001"
+        type="number"
+        placeholder="Vento X"
+        value="0.005"
+        max="1"
+        min="-1"
+      />
+      <br />
+
+      <label for="gravity">Gravidade:</label>
+      <input
+        id="gravity"
+        step="0.01"
+        type="number"
+        placeholder="Gravidade"
+        value="0.05"
+        max="1"
+        min="-1"
+      />
+    </div>
+    <canvas id="canvas" width="500" height="500"></canvas>
 
     <script src="src/index.ts"></script>
   </body>

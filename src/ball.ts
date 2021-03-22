@@ -18,7 +18,7 @@ export class Ball {
 
   public update(dt: number) {
     this.velocity
-      .add(this.acceleration.clone().scale(new Vector2(dt, dt)))
+      .add(this.acceleration)
       .scale(new Vector2(this.friction, this.friction));
     this.acceleration.scale(new Vector2(0, 0));
     this.position.add(this.velocity.clone().scale(new Vector2(dt, dt)));
