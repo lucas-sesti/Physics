@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": false,
+    "module": "commonjs",
+    "jsx": "preserve",
+    "target": "ES5",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "lib": [
+      "dom",
+      "ESNext"
+    ],
+    "rootDir": "src",
+    "moduleResolution": "node"
+  }
+}
